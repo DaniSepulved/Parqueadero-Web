@@ -11,6 +11,8 @@ function Pagos() {
     return (
         <>
             <div className="pagos-bg">
+
+                {/* Cabecera superior interna de la sección de facturación */}
                 <header className='pagos-header'>
                     <h1 className='pagos-logo'>ParqueaderoSC</h1>
                     <button className='pagos-bell'>
@@ -18,6 +20,8 @@ function Pagos() {
                     </button>
                 </header>
                 <div className='pagos-container'>
+
+                    {/* Tarjeta izquierda: Resumen estático del ticket generado por el parqueadero */}
                     <div className='pagos-card'>
                         <h2 className='pagos-tittle'>Detalles</h2>
                         <p><strong>Tipo de servicio: </strong>Reservas de Parqueo</p>
@@ -26,6 +30,8 @@ function Pagos() {
                         <p><strong>Espacio:</strong> A-12 </p>
                         <p><strong>Factura:</strong> 0001 </p>
                     </div>
+
+                    {/* Tarjeta derecha: Listado de pasarelas y billeteras virtuales integradas */}
                     <div className='pagos-card'>
                         <h2 className='pagos-tittle'>Metodo de pago</h2>
                         <button className='metodo'>

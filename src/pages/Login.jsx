@@ -9,6 +9,7 @@ import { useAuth } from '../context/AuthContext';
 // let apiAuth = "https://proyecto-sena-9lzp.onrender.com/api/auth/login";
 // let apiRegistro = "https://proyecto-sena-9lzp.onrender.com/api/usuarios";
 
+// Estados locales para controlar los campos reactivos de los formularios
 function Login() {
     const [getNombre, setNombre] = useState("");
     const [getPassword, setPassword] = useState("");
@@ -19,6 +20,7 @@ function Login() {
     const navigate = useNavigate();
     const { login: authLogin } = useAuth(); 
 
+    // Valida de forma estática las credenciales del administrador del sistema.
     function iniciarSesion() {
         if (getEmail === "admin@admin.com" && getPassword === "admin123") {
             authLogin(
@@ -59,6 +61,7 @@ function Login() {
         // });
     }
 
+    // Envía una petición POST en formato JSON a la API para persistir un nuevo usuario.
     function registrarUsuario() {
         fetch(apiRegistro, {
             method: "POST",
@@ -104,13 +107,6 @@ function Login() {
                         placeholder="Email" 
                         value={getEmail}
                     />
-                    {/* <input 
-                        onChange={(e) => setNombre(e.target.value)} 
-                        type="text" 
-                        className="input" 
-                        placeholder="Email" 
-                        value={getNombre} 
-                    /> */}
                     <input 
                         onChange={(e) => setPassword(e.target.value)} 
                         type="password" 

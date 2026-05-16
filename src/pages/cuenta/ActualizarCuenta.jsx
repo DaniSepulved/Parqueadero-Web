@@ -1,5 +1,6 @@
 import "./ActualizarCuenta.css";
 
+// Permite al usuario editar la información de su perfil mediante un formulario.
 const ActualizarCuenta = () => {
   return (
     <div className="actualizar-container">

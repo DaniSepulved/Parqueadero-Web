@@ -2,10 +2,12 @@ import React from "react";
 import "./Footer.css";
 import logo from "/Logo.jpg"; // Asegúrate de tener tu logo en /public
 
+// Componente funcional constante llamado 'Footer'
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+        
         {/* IZQUIERDA */}
         <div className="footer-about">
           <h3>ACERCA DE PARQUEADERO SC</h3>

@@ -1,10 +1,12 @@
 import { useState } from "react";
 
+// Componente funcional principal llamado ChatBotWidget
 const ChatBotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
 
+// Función asíncrona encargada de gestionar el envío de mensajes al servidor
     const sendMessage = async () => {
         if(!input.trim()) return;
         setMessages([...messages, { sender: "user", text: input }]);
@@ -24,6 +26,7 @@ const ChatBotWidget = () => {
         setInput("");
     };
 
+// Estructura visual del componente
     return (
         <>
             <div 

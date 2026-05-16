@@ -6,6 +6,7 @@ import { useAuth } from "../context/AuthContext"
 const MenuLateral = () => {
   let redireccion = useNavigate()
 
+// Función que se dispara al hacer clic en el botón de salida.
   function cerrarSesion() {
     alertaRedireccion("Cerrando sesión", "/", redireccion)
   }
@@ -13,7 +14,6 @@ const MenuLateral = () => {
   return (
     <aside className="aplicacion__menu-lateral">
       <h1 className="aplicacion__menu-lateral-logo">Parqueadero<span className="aplicacion__menu-lateral-logo--resaltado">SC</span></h1>
-      {/* <h2>Usuario: {localStorage.getItem('nombre', nombre)} {localStorage.getItem('apellido', apellido)}</h2> */}
       <h2>Usuario: {localStorage.getItem('nombre')} {localStorage.getItem('apellido')}</h2>
       <img className="aplicacion__menu-lateral-logo-imagen" src="Logo.jpg" alt="Logo" />
       <nav className="aplicacion__menu-lateral-navegacion">

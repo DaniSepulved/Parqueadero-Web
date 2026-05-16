@@ -1,5 +1,7 @@
 import "./InformacionCuenta.css";
 
+// Renderiza de forma exclusiva y en modo lectura los datos del usuario activo
+// que se encuentran guardados en el almacenamiento del navegador
 const InformacionCuenta = () => {
   return (
     <div className="info-container">

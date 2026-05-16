@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { Link } from "react-router-dom";
 import { eliminarCuenta } from "../helpers/funciones";
 
+// Componente para validar la cuenta del usuario
 const Cuenta = () => {
   return (
     <>
@@ -21,16 +22,19 @@ const Cuenta = () => {
             BIENVENIDO, USUARIO
           </p>
 
+          {/* Redirecciona a las secciones de información y actualización de cuenta, o elimina tu cuenta de forma permanente. */}
           <Link to="/cuenta/informacion" className="btn-cuenta info">
             📇 Información de mi Cuenta
             <span>Ver y editar detalle</span>
           </Link>
 
+          {/* Redirecciona a las secciones de información y actualización de cuenta, o elimina tu cuenta de forma permanente. */}
           <Link to="/cuenta/actualizar" className="btn-cuenta editar">
             ⚙️ Actualizar Cuenta
             <span>Modificar plan, datos personales</span>
           </Link>
 
+          {/* Aparace una ventana emergente de confirmación para eliminar la cuenta de forma permanente. */}
           <button className="btn-cuenta eliminar"
           onClick={eliminarCuenta}>
             🗑️ Eliminar Cuenta

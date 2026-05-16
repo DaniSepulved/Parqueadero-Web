@@ -2,7 +2,8 @@ import "./ReservasEspacio.css";
 import Footer from '../components/Footer';
 
 const ReservasEspacio = () => {
-  const espacios = Array.from({ length: 12 }, (_, i) => i + 1); // Simulamos 12 espacios de parqueo
+  // Instanciación de una colección de control
+  const espacios = Array.from({ length: 12 }, (_, i) => i + 1); // Simula 12 espacios de parqueo
 
   return (
     <>

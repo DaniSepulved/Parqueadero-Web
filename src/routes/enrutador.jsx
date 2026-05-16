@@ -9,6 +9,7 @@ import Nequi from '../pages/payments/Nequi'
 import InformacionCuenta from '../pages/cuenta/InformacionCuenta'
 import ActualizarCuenta from '../pages/cuenta/ActualizarCuenta'
 
+// Maneja las rutas de la aplicación, incluyendo rutas protegidas para usuarios autenticados.
 export let enrutador = [
   {
     path: '/',

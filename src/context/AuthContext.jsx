@@ -1,14 +1,18 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+// Creación del contexto global para la autenticación
 const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
+    // Evalúa si hay un token activo.
     const [isAuthenticated, setIsAuthenticated] = useState(() => {
         return !!localStorage.getItem('token');
     });
+    // Recupera el rol guardado en el navegador
     const [userRole, setUserRole] = useState(() => {
         return localStorage.getItem('rol') || null;
     });
 
+    // Escucha cambios en el almacenamiento local para sincronizar el estado de la sesión
     useEffect(() => {
         const handleStorageChange = () => {
             setIsAuthenticated(!!localStorage.getItem('token'));
@@ -18,6 +22,7 @@ export const AuthProvider = ({ children }) => {
         return () => window.removeEventListener('storage', handleStorageChange);
     }, []);
 
+    // Registra el inicio de sesión
     const login = (token, email, role, nombre, apellido) => {
         localStorage.setItem('token', token);
         localStorage.setItem('usuario', email);
@@ -30,6 +35,7 @@ export const AuthProvider = ({ children }) => {
         setUserRole(role);
     };
 
+    // Cierra la sesión activa.
     const logout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('usuario');
@@ -38,6 +44,7 @@ export const AuthProvider = ({ children }) => {
         setUserRole(null);
     };
 
+    // Empaqueta las variables de estado y las funciones para que sean accesibles externamente
     const contextValue = {
         isAuthenticated,
         userRole,

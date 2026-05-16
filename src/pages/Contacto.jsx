@@ -4,9 +4,11 @@ import './Contacto.css';
 import ChatBotWidget from '../components/ChatBotWidget';
 import Footer from '../components/Footer';
 
+// Referencia mutable para acceder directamente al nodo del formulario
 const Contacto = () => {
   const form = useRef();
 
+  // Envía los datos del formulario a EmailJS de manera asíncrona.
   const sendEmail = (e) => {
     e.preventDefault();
 

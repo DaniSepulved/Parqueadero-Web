@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import ChatBotWidget from './components/ChatBotWidget';
 // import Footer from './components/Footer';
 
+// Componente Principal: Home
 const Home = () => {
   return (
   <>
@@ -18,6 +19,8 @@ const Home = () => {
               <span>ParqueaderoSC</span>
             </h2>
           </section>
+
+          {/* Seccion de misión, visión y valores de la empresa */}
           <section className="mvv">
               <h2 className="mvv__titulo">Nuestra Esencia</h2>
               <div className="mvv__cards">

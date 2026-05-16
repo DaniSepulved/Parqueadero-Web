@@ -1,6 +1,7 @@
 import "./Nequi.css";
 import { Link } from "react-router-dom";
 
+// Representa la interfaz de pasarela simulada para pagos a través de cuentas Nequi.
 function Nequi() {
   return (
     <div className="nequi-container">
